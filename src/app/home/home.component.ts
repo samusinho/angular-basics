@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   btnText = "Habilitar"
   disabled = true;
 
+  inputText: string = "texto a cargar en el input";
+
   ngOnInit(): void {
   }
 
