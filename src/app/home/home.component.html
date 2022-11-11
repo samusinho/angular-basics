@@ -6,26 +6,23 @@
     </p>
 </div>
 <div class="container">
-    <div class="mb-2">
-        <button 
-        class="btn btn-primary" 
-        (click)="onClickButton()">{{btnText}}</button>
-    </div>
-
-    <div>
-        <select 
-        class="form-select"
-        [disabled]="disabled">
-            <option value="1">Opción 1</option>
-            <option value="1">Opción 2</option>
-            <option value="1">Opción 3</option>
-        </select>
-    </div>
-
-    <div class="mt-4">
-        <label>Texto en el input</label>
-        <input class="form-control" type="text" [(ngModel)]="inputText">
-        <p class="mt-2">Valor de la variable <b>inputText</b>: {{inputText}}</p>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a 
+            [ngClass]="{'active': tab == 'products'}"
+            class="nav-link" 
+            (click)="onTabSelected('products')">Productos</a>
+        </li>
+        <li class="nav-item">
+            <a 
+            [ngClass]="{'active': tab == 'contact-info'}"
+            class="nav-link" 
+            (click)="onTabSelected('contact-info')">Contacto</a>
+        </li>
+    </ul>
+    <div class="mt-2">
+        <app-products *ngIf="tab == 'products'"></app-products>
+        <app-contact-info *ngIf="tab == 'contact-info'"></app-contact-info>
     </div>
 </div>
 

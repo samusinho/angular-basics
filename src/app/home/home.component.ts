@@ -9,17 +9,13 @@ export class HomeComponent implements OnInit {
   
   constructor() { }
   title = "Frutas y verduras"
-  btnText = "Habilitar"
-  disabled = true;
-
-  inputText: string = "texto a cargar en el input";
+  
+  tab = 'products'
 
   ngOnInit(): void {
   }
 
-  onClickButton() {
-    this.disabled = !this.disabled;
-    this.btnText = this.disabled ? "Habilitar" : "Deshabilitar"
+  onTabSelected(tab: string) {
+    this.tab = tab;
   }
-
 }
