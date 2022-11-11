@@ -9,17 +9,15 @@ export class HomeComponent implements OnInit {
   
   constructor() { }
   title = "Frutas y verduras"
-  btnText = "Mostrar"
-  infoText = "la información está oculta"
-  infoHidden = true;
+  btnText = "Habilitar"
+  disabled = true;
 
   ngOnInit(): void {
   }
 
   onClickButton() {
-    this.infoHidden = !this.infoHidden;
-    this.btnText = this.infoHidden ? "Mostrar" : "Ocultar"
-    this.infoText = this.infoHidden ? "la información está oculta" : "La información ya no está oculta"
+    this.disabled = !this.disabled;
+    this.btnText = this.disabled ? "Habilitar" : "Deshabilitar"
   }
 
 }

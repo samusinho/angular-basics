@@ -6,8 +6,21 @@
     </p>
 </div>
 <div class="container">
-    <button class="btn btn-primary" (click)="onClickButton()">{{btnText}}</button>
+    <div class="mb-2">
+        <button 
+        class="btn btn-primary" 
+        (click)="onClickButton()">{{btnText}}</button>
+    </div>
 
-    <p>{{infoText}}</p>
+    <div>
+        <select 
+        class="form-select"
+        [disabled]="disabled">
+            <option value="1">Opción 1</option>
+            <option value="1">Opción 2</option>
+            <option value="1">Opción 3</option>
+        </select>
+    </div>
 </div>
+
 
